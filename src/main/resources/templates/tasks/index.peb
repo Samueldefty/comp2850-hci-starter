@@ -28,6 +28,8 @@
 #}
 <section aria-labelledby="list-heading">
   <h2 id="list-heading">Current tasks ({{ tasks | length }})</h2>
+  {# Minor Issue: Empty heading for Week 7 Lab 2 discovery #}
+  <h3></h3>
   <ul id="task-list">
     {% for task in tasks %}
       <li id="task-{{ task.id }}">
