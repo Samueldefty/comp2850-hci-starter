@@ -14,8 +14,6 @@
     <input type="text" id="title" name="title" required
            placeholder="e.g., Buy milk" aria-describedby="title-hint">
     <small id="title-hint">Keep it short and specific.</small>
-    {# Minor issue: unlabeled input for Week 7 Lab 2 #}
-    <input type="text" name="priority" placeholder="Priority (optional)">
     <button type="submit">Add Task</button>
   </form>
 </section>
@@ -28,6 +26,24 @@
    - Include tasks/_item.peb when viewing
    - See mdbook for full implementation
 #}
+
+<!-- <section aria-labelledby="list-heading">
+  <h2 id="list-heading">Current tasks ({{ tasks | length }})</h2>
+  <ul id="task-list">
+    {% for task in tasks %}
+      {% if editingId and editingId == task.id %}
+        {% include "tasks/_edit.peb" with {"task": task, "error": errorMessage} %}
+      {% else %}
+        {% include "tasks/_item.peb" with {"task": task} %}
+      {% endif %}
+    {% empty %}
+      <li>No tasks yet. Add one above!</li>
+    {% endfor %}
+  </ul>
+</section>
+{% endblock %} -->
+
+
 <section aria-labelledby="list-heading">
   <h2 id="list-heading">Current tasks ({{ tasks | length }})</h2>
   {# Minor Issue: Image without alt text for Week 7 Lab 2 discovery #}

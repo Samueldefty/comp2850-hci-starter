@@ -91,7 +91,12 @@ object TaskRepository {
     // Follow instructions in mdbook to implement:
     // - fun find(id: Int): Task?
     // - fun update(task: Task)
+    // fun find(id: Int): Task? = tasks.find { it.id == id }
 
+    // fun update(task: Task) {
+    //     tasks.find { it.id == task.id }?.let { it.title = task.title }
+    //     persist()
+    // }
     private fun persist() {
         file.writeText("id,title\n" + tasks.joinToString("\n") { "${it.id},${it.title}" })
     }
