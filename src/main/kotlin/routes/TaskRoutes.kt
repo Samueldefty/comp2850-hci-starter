@@ -126,7 +126,7 @@ fun Route.taskRoutes() {
      * Dual-mode: HTMX empty response or PRG redirect
      */
     post("/tasks/{id}/delete") {
-        val id = call.parameters["id"]?.toIntOrNull()
+        val id = call.parameters["id"]?.toIntOrNull() // if its not int it goes to nothing
         val removed = id?.let { TaskRepository.delete(it) } ?: false
 
         if (call.isHtmx()) {

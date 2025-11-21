@@ -1,0 +1,11 @@
+id: Unique number (1, 2, 3...)
+title: Short summary (< 10 words)
+story_ref: Link to stories.md#S1 or notes.md#L15
+story_type: "Job story", "Pain point", "WCAG violation", "Research insight"
+need: High-level category ("Confirmation feedback", "Keyboard access")
+type: "Accessibility", "Usability", "Performance", "Tech debt"
+severity: High (blocks task), Medium (hinders), Low (cosmetic)
+inclusion_risk: Comma-separated tags (SR, Keyboard, Cognitive, Motor, Low vision)
+evidence: Path to notes, screenshot, WCAG reference
+notes: Free-form (root cause, affected flows)
+candidate_fix: true if planning to fix in Week 7 (pick 1-2)
